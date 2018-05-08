@@ -6,7 +6,7 @@
 
 <div class="center">
             <div class="top">
-            <a href="index"><div id="logo">logo</div></a>           
+            <a href="index"><div id="logo">Forum</div></a>        
                 <% 
 				if(session.getAttribute("loginer")==null){ %>
                 	<a href="login.jsp" class="topbutton">马上登陆</a>
@@ -15,8 +15,8 @@
 					<div id="welcome">
 					您好，用户<a href="user/<%=((UserBean)session.getAttribute("loginer")).getID() %>"><% out.print( ((UserBean)session.getAttribute("loginer")).getName() );%></a>
 					<br>
-					<a href="post.jsp">发帖</a>&nbsp;&nbsp;
-					<a href="login?action=logout">注销</a>
+					<a href="post.jsp">发表帖文</a>&nbsp;&nbsp;
+					<a href="login?action=logout">账号注销</a>
 					</div>
 				<% } %>
                 

@@ -5,25 +5,22 @@
 * @Last Modified time: 2014-12-25 17:14:21
 */
 * {
-	text-shadow: 0 0 5px #f96;
+	box-sizing: border-box;
 }
 
 body {
     font-family:  "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans;
     font-size: 16px;
     margin: 0px;
-    background-image: url(../images/02.jpg);
+    background-image: url(url(http://img.zcool.cn/community/01efb0586f639fa801219c77859be6.jpg));
     background-size: cover;
 	background-attachment: fixed;
 }
 .clear {
 	clear:both;
 }
-a {color:rgba(255,255,255,0.9); text-decoration:none;text-shadow: 0 0 5px #FF6666;}
-a:visited {color:rgba(255,255,255,0.9);}
-a:hover {color:#D4DA16;}
-a:focus {outline:thin dotted;}
-a:hover,a:active {outline:0;}
+a {color:#777; text-decoration:none;text-shadow: 0 0 5px #FF6666;}
+a:hover {color:green;}
 form {
 	line-height: 40px;
 	color: rgba(255,255,255,0.8);
@@ -67,6 +64,8 @@ textarea {
 	color:#555;
 	font-size:16px;
 	text-shadow: 0 0 0 #000;
+	resize: none;
+	width: 100% !important;
 }
 input:hover,textarea:hover {
 	border:1px solid #555;
@@ -95,11 +94,10 @@ input[type=reset]:hover,input[type=submit]:hover,input[type=button]:hover {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom:30px;
-    
-    color: rgba(255,255,255,0.8);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-
-    
+}
+::-moz-selection {
+    background:#d3d3d3; 
+    color:#555;
 }
 ::selection {
     background:#d3d3d3; 
@@ -108,18 +106,23 @@ input[type=reset]:hover,input[type=submit]:hover,input[type=button]:hover {
 /*top部分*/
 .top {
     width: 100%;
-    height: 120px;
+    height: auto;
     margin-bottom: 15px;
-
-    background-color: rgba(0,0,0,0.2);
-    -moz-box-shadow: 3px 3px 20px #909090;
-    -webkit-box-shadow: 3px 3px 20px #909090;
     box-shadow:3px 3px 20px #909090;
+    position: relative;
 }
-
+.top>span{
+	position: absolute;
+	bottom: 50px;
+	left: 220px;
+}
+.top>form{
+	position: absolute;
+	bottom: 0;
+	left: 220px;
+}
 .top .topbutton {
     font-size: 20px;
-    background-color: rgba(255,255,255,0.2);
     padding: 4px 8px;
     margin: 0 5px;
     margin-top: 40px;
@@ -151,9 +154,6 @@ input[type=reset]:hover,input[type=submit]:hover,input[type=button]:hover {
     min-height:300px;
     padding-top:30px;
 	padding-bottom:50px;
-    background-color: rgba(0,0,0,0.2);
-    -moz-box-shadow: 3px 3px 20px #909090;
-    -webkit-box-shadow: 3px 3px 20px #909090;
     box-shadow:3px 3px 20px #909090;
 }
 /*注册部分*/
@@ -195,9 +195,7 @@ input[type=reset]:hover,input[type=submit]:hover,input[type=button]:hover {
 
 /*首页帖子列表*/
 .posts {
-	height: 50px;
-	margin:0px 10px;
-	margin-bottom:10px;
+	margin:10px;
 	font-size:18px;
 }
 .posts span{
@@ -245,6 +243,7 @@ input[type=reset]:hover,input[type=submit]:hover,input[type=button]:hover {
 	border-style:dashed;
 	color:rgba(255,255,255,0.3);
 	width:99%;
+	margin: 20px 10px;
 }
 
 /*发表回帖*/
